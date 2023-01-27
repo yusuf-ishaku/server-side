@@ -1,0 +1,14 @@
+{
+  "name": "internship",
+  "version": "1.0.0",
+  "description": "This is a server-side application by Fortune Yusuf Ishaku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fortune Yusuf Ishaku",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
