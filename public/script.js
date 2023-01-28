@@ -11,7 +11,7 @@ if ('geolocation' in navigator) {
         lat.innerText = `latitude: ${position.coords.latitude}`;
     });
 
-    let recievedData = [];
+    // let recievedData = [];
     submit.onclick = ()=>{
         navigator.geolocation.getCurrentPosition(async (position) => {
             console.log(position);
@@ -24,14 +24,12 @@ if ('geolocation' in navigator) {
             
            
             let data = { longitude , latitude };
-            recievedData.push(data);
-
             let options = {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
                 },
-                body: JSON.stringify(recievedData)
+                body: JSON.stringify(data)
             }
             const response = await fetch('/api', options);
             const json = await response.json();
