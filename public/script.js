@@ -1,4 +1,7 @@
-let submit = document.querySelector(".submitpos")
+let submit = document.querySelector(".submitpos");
+// let insubmit = document.querySelector(".input");
+let jade = document.querySelector(".name-input");
+
 if ('geolocation' in navigator) {
     console.log("geolocation available");
     navigator.geolocation.getCurrentPosition((position) => {
@@ -22,8 +25,8 @@ if ('geolocation' in navigator) {
             let lat = document.querySelector(".lat");
             lat.innerText = `latitude: ${position.coords.latitude}`;
             
-           
-            let data = { longitude , latitude };
+            let nameValue = jade.value;
+            let data = { longitude , latitude, nameValue };
             let options = {
                 method: 'POST',
                 headers: {
