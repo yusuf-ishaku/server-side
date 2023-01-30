@@ -26,4 +26,4 @@ app.post('/api', (request, response) =>{
         status: "Success",
         collectedData: data
     })
-})
+}) 
